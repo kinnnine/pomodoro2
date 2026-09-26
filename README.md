@@ -1,2 +1,2 @@
-# pomodoro2
-Just a simple pomodoro timer, nothing else.
+# pomodoro²
+Just a simple pomodoro timer webapp, nothing else.
