@@ -1,6 +1,13 @@
 import m from "mithril";
-import { App } from "./App";
 
-import "./css/base.css";
+import "./css/Base.css";
 
-m.mount(document.body, App);
+import { ClockView } from "./views/ClockView";
+import { ConfigView } from "./views/ConfigView";
+import { AboutView } from "./views/AboutView";
+
+m.route(document.body, "/clock", {
+	"/clock": ClockView,
+	"/config": ConfigView,
+	"/about": AboutView
+})
