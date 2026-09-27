@@ -1,0 +1,38 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "idle": "idle",
+  "work": "work",
+  "break": "break",
+  "work_time": "work time",
+  "short_break_time": "short break time",
+  "long_break_time": "long break time",
+  "long_break_time_tooltip": "set to 0 for disable",
+  "language": "language",
+  "interface_font": "interface font",
+  "clock_font": "clock font",
+  "color_scheme": "color scheme",
+  "show_status_text_on_clock": "show status text on clock",
+  "enable_notification_desktop": "enable notification desktop",
+  "enable_notification_sound": "enable notification sound",
+  "factory_reset": "factory reset",
+  "about_pomodoro": [
+    "Manage your time with Pomodoro Technique.",
+    "Pomodoro Technique is a time management method with a goal of improving focus on your work and reducing distractions.",
+    "Developed by Francesco Cirillo in the late 1980s while he was a university student."
+  ],
+  "about_using_pomodoro_effectively": [
+    "Manage your time with Pomodoro Technique, effectively.",
+    "Pomodoro Technique isn't magic that immediately gives you improved focus or reduced all of distractions.",
+    "You must need to be cooperative with, by planning an objective, doing one thing at a time, deserve your break time and repeat until objective is done."
+  ],
+  "about_pomodoro2": [
+    "Manage your time with pomodoro2.",
+    "This web application created based on idea of Pomodoro Technique, the reason for this exists is to testing out my skill of Mithril.js programming.",
+    "Created by Supphakit Duanghoy (kinnnine) since 2026 of his first year in university."
+  ],
+  "about_recommends": [
+    "Recommended reading about Pomodoro Technique.",
+    "https://www.pomodorotechnique.com/francesco-cirillo/",
+    "https://www.chulabook.com/blog/17/43"
+  ]
+}
