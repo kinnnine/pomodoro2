@@ -6,7 +6,7 @@ import { ConfigComponent } from "./components/ConfigComponent";
 export const ConfigView = () => {
     return {
         view: function () {
-            return m("div", { class: "flex flex-col place-items-center" }, [
+            return m("div", { class: "flex flex-col p-5 place-items-center" }, [
                 m(NavbarComponent),
                 m(ConfigComponent)
             ])
