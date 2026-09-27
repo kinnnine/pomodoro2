@@ -3,7 +3,11 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-    plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
-        tailwindcss()
+    plugins: [paraglideVitePlugin({
+        project: './project.inlang',
+        outdir: './src/paraglide',
+        emitTsDeclarations: true
+    }),
+    tailwindcss()
     ],
 });
