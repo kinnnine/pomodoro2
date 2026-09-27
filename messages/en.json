@@ -15,24 +15,11 @@
   "enable_notification_desktop": "enable notification desktop",
   "enable_notification_sound": "enable notification sound",
   "factory_reset": "factory reset",
-  "about_pomodoro": [
-    "Manage your time with Pomodoro Technique.",
-    "Pomodoro Technique is a time management method with a goal of improving focus on your work and reducing distractions.",
-    "Developed by Francesco Cirillo in the late 1980s while he was a university student."
-  ],
-  "about_using_pomodoro_effectively": [
-    "Manage your time with Pomodoro Technique, effectively.",
-    "Pomodoro Technique isn't magic that immediately gives you improved focus or reduced all of distractions.",
-    "You must need to be cooperative with, by planning an objective, doing one thing at a time, deserve your break time and repeat until objective is done."
-  ],
-  "about_pomodoro2": [
-    "Manage your time with pomodoro2.",
-    "This web application created based on idea of Pomodoro Technique, the reason for this exists is to testing out my skill of Mithril.js programming.",
-    "Created by Supphakit Duanghoy (kinnnine) since 2026 of his first year in university."
-  ],
-  "about_recommends": [
-    "Recommended reading about Pomodoro Technique.",
-    "https://www.pomodorotechnique.com/francesco-cirillo/",
-    "https://www.chulabook.com/blog/17/43"
-  ]
+  "about_pomodoro_header": "Manage your time with Pomodoro Technique.",
+  "about_using_pomodoro_effectively_header": "Manage your time with Pomodoro Technique, effectively.",
+  "about_pomodoro2_header": "Manage your time with pomodoro2.",
+  "about_recommends_header": "Recommended reading about Pomodoro Technique.",
+  "about_pomodoro": "Pomodoro Technique is a time management method with a goal of improving focus on your work and reducing distractions.\nDeveloped by Francesco Cirillo in the late 1980s while he was a university student.",
+  "about_using_pomodoro_effectively": "Pomodoro Technique isn't magic that immediately gives you improved focus or reduced all of distractions.\nYou must need to be cooperative with, by planning an objective, doing one thing at a time, deserve your break time and repeat until objective is done.",
+  "about_pomodoro2": "This web application created based on idea of Pomodoro Technique, the reason for this exists is to testing out my skill of Mithril.js programming.\nCreated by Supphakit Duanghoy (kinnnine) since 2026 of his first year in university."
 }
