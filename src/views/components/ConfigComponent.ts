@@ -8,11 +8,32 @@ export const ConfigComponent = () => {
         view: function () {
             return m("div", { class: "w-fit flex flex-col place-items-start" }, [
                 m("fieldset", { class: "fieldset mb-3" }, [
+                    m("legend", { class: "fieldset-legend text-base" }, t.work_time()),
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "25" }),
+                        t.minutes()
+                    ])
+                ]),
+                m("fieldset", { class: "fieldset mb-3" }, [
+                    m("legend", { class: "fieldset-legend text-base" }, t.short_break_time()),
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "5" }),
+                        t.minutes()
+                    ])
+                ]),
+                m("fieldset", { class: "fieldset mb-3" }, [
+                    m("legend", { class: "fieldset-legend text-base" }, t.long_break_time()),
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "15" }),
+                        t.minutes()
+                    ])
+                ]),
+                m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.language()),
-                    m("select", { class: "select w-70", onchange: function () { setLocale(this.value, { reload: false }) } },
+                    m("select", { class: "select select-ghost w-70", onchange: function () { setLocale(this.value, { reload: false }) } },
                         locales.map(function (locale) {
                             if (getLocale() == locale) {
-                                return m("option", {"selected":"selected"}, locale)
+                                return m("option", { "selected": "selected" }, locale)
                             } else {
                                 return m("option", locale)
                             }
@@ -21,7 +42,7 @@ export const ConfigComponent = () => {
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.clock_font()),
-                    m("select", { class: "select w-70" }, [
+                    m("select", { class: "select select-ghost w-70" }, [
                         // ..
                     ]),
                 ]),
@@ -30,16 +51,22 @@ export const ConfigComponent = () => {
                     // ..
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
-                    m("legend", { class: "fieldset-legend text-base" }, t.show_status_text_on_clock()),
-                    m("input", { class: "toggle", "type": "checkbox" })
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "toggle", type: "checkbox" }),
+                        t.show_status_text_on_clock()
+                    ])
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
-                    m("legend", { class: "fieldset-legend text-base" }, t.enable_notification_desktop()),
-                    m("input", { class: "toggle", "type": "checkbox" })
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "toggle", type: "checkbox" }),
+                        t.enable_notification_desktop()
+                    ])
                 ]),
                 m("fieldset", { class: "fieldset mb-5" }, [
-                    m("legend", { class: "fieldset-legend text-base" }, t.enable_notification_sound()),
-                    m("input", { class: "toggle", "type": "checkbox" })
+                    m("label", { class: "label text-base" }, [
+                        m("input", { class: "toggle", type: "checkbox" }),
+                        t.enable_notification_sound()
+                    ])
                 ]),
                 m("button", { class: "btn btn-active btn-warning" }, t.factory_reset())
             ])

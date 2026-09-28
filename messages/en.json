@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "minutes": "minutes",
   "idle": "idle",
   "work": "work",
   "break": "break",
