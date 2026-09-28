@@ -6,7 +6,9 @@ export default defineConfig({
     plugins: [paraglideVitePlugin({
         project: './project.inlang',
         outdir: './src/paraglide',
-        emitTsDeclarations: true
+        strategy: ["localStorage", "cookie"],
+        emitTsDeclarations: true,
+        emitReadme: false
     }),
     tailwindcss()
     ],
