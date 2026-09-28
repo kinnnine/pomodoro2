@@ -20,12 +20,6 @@ export const ConfigComponent = () => {
                     ),
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
-                    m("legend", { class: "fieldset-legend text-base" }, t.interface_font()),
-                    m("select", { class: "select w-70" }, [
-                        // ..
-                    ]),
-                ]),
-                m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.clock_font()),
                     m("select", { class: "select w-70" }, [
                         // ..

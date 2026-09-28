@@ -8,7 +8,6 @@
   "long_break_time": "เวลาหยุดพักระยะยาว",
   "long_break_time_tooltip": "ตั้งค่าเป็น 0 เพื่อปิด",
   "language": "ภาษา",
-  "interface_font": "รูปแบบอักษรหลัก",
   "clock_font": "รูปแบบอักษรของนาฬิกา",
   "color_scheme": "ธีมสี",
   "show_status_text_on_clock": "แสดงสถานะบนหน้านาฬิกา",
