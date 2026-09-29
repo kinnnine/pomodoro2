@@ -1,5 +1,6 @@
 import m from "mithril";
 
+import { getConfig } from "../../config";
 import * as t from "../../paraglide/messages";
 import { locales, getLocale, setLocale } from "../../paraglide/runtime";
 
@@ -10,21 +11,42 @@ export const ConfigComponent = () => {
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.work_time()),
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "25" }),
+                        m("input", {
+                            class: "input input-ghost w-15",
+                            type: "number",
+                            min: 1,
+                            max: 999,
+                            placeholder: "25",
+                            value: getConfig("work_time")
+                        }),
                         t.minutes()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.short_break_time()),
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "5" }),
+                        m("input", {
+                            class: "input input-ghost w-15",
+                            type: "number",
+                            min: 1,
+                            max: 999,
+                            placeholder: "5",
+                            value: getConfig("short_break_time")
+                        }),
                         t.minutes()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("legend", { class: "fieldset-legend text-base" }, t.long_break_time()),
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "input input-ghost w-15", type: "number", min: 1, max: 999, "placeholder": "15" }),
+                        m("input", {
+                            class: "input input-ghost w-15",
+                            type: "number",
+                            min: 1,
+                            max: 999,
+                            placeholder: "15",
+                            value: getConfig("long_break_time")
+                        }),
                         t.minutes()
                     ])
                 ]),
@@ -52,19 +74,19 @@ export const ConfigComponent = () => {
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox" }),
+                        m("input", { class: "toggle", type: "checkbox", value: getConfig("show_status_text_on_clock") }),
                         t.show_status_text_on_clock()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox" }),
+                        m("input", { class: "toggle", type: "checkbox", value: getConfig("enable_notification_desktop") }),
                         t.enable_notification_desktop()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-5" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox" }),
+                        m("input", { class: "toggle", type: "checkbox", value: getConfig("enable_notification_sound") }),
                         t.enable_notification_sound()
                     ])
                 ]),
