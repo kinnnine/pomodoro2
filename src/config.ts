@@ -1,15 +1,4 @@
-interface configSchema {
-    work_time: number,
-    short_break_time: number,
-    long_break_time: number,
-    clock_font: string,
-    color_scheme: string,
-    show_status_text_on_clock: boolean,
-    enable_notification_desktop: boolean,
-    enable_notification_sound: boolean
-}
-
-const defaultConfig: configSchema = {
+const defaultConfig = {
     work_time: 25,
     short_break_time: 5,
     long_break_time: 15,
@@ -23,7 +12,8 @@ const defaultConfig: configSchema = {
 export let setConfig = (key: string, value: string | number | boolean | undefined) => {
     if (!key) return;
     if (!value) {
-        localStorage.setItem(key, defaultConfig[key]);
+        const defaultValue = defaultConfig[key as keyof typeof defaultConfig];
+        localStorage.setItem(key, defaultValue.toString());
     } else {
         switch (typeof value) {
             case "number":
@@ -40,11 +30,12 @@ export let setConfig = (key: string, value: string | number | boolean | undefine
 export let getConfig = (key: string) => {
     if (!key) return;
     const config = localStorage.getItem(key);
+    const defaultValue = defaultConfig[key as keyof typeof defaultConfig];
     if (!config) {
-        setConfig(key, defaultConfig[key]);
-        return defaultConfig[key];
+        setConfig(key, defaultValue.toString());
+        return defaultValue;
     } else {
-        switch (typeof defaultConfig[key]) {
+        switch (typeof defaultValue) {
             case "number":
                 return Number(config);
             case "boolean":
