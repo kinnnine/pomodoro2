@@ -1,6 +1,6 @@
 import m from "mithril";
 
-import { getConfig } from "../../config";
+import { setConfig, toggleConfig, getConfig } from "../../config";
 import * as t from "../../paraglide/messages";
 import { locales, getLocale, setLocale } from "../../paraglide/runtime";
 
@@ -17,6 +17,9 @@ export const ConfigComponent = () => {
                             min: 1,
                             max: 999,
                             placeholder: "25",
+                            oninput: function (e: any) {
+                                setConfig("work_time", e.target.value)
+                            },
                             value: getConfig("work_time")
                         }),
                         t.minutes()
@@ -31,6 +34,9 @@ export const ConfigComponent = () => {
                             min: 1,
                             max: 999,
                             placeholder: "5",
+                            oninput: function (e: any) {
+                                setConfig("short_break_time", e.target.value)
+                            },
                             value: getConfig("short_break_time")
                         }),
                         t.minutes()
@@ -45,6 +51,9 @@ export const ConfigComponent = () => {
                             min: 1,
                             max: 999,
                             placeholder: "15",
+                            oninput: function (e: any) {
+                                setConfig("long_break_time", e.target.value)
+                            },
                             value: getConfig("long_break_time")
                         }),
                         t.minutes()
@@ -74,19 +83,40 @@ export const ConfigComponent = () => {
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox", value: getConfig("show_status_text_on_clock") }),
+                        m("input", {
+                            class: "toggle",
+                            type: "checkbox",
+                            onclick: function () {
+                                toggleConfig("show_status_text_on_clock");
+                            },
+                            checked: `${getConfig("show_status_text_on_clock") === true ? "checked" : ""}`
+                        }),
                         t.show_status_text_on_clock()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-3" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox", value: getConfig("enable_notification_desktop") }),
+                        m("input", {
+                            class: "toggle",
+                            type: "checkbox",
+                            onclick: function () {
+                                toggleConfig("enable_notification_desktop");
+                            },
+                            checked: `${getConfig("enable_notification_desktop") === true ? "checked" : ""}`
+                        }),
                         t.enable_notification_desktop()
                     ])
                 ]),
                 m("fieldset", { class: "fieldset mb-5" }, [
                     m("label", { class: "label text-base" }, [
-                        m("input", { class: "toggle", type: "checkbox", value: getConfig("enable_notification_sound") }),
+                        m("input", {
+                            class: "toggle",
+                            type: "checkbox",
+                            onclick: function () {
+                                toggleConfig("enable_notification_sound");
+                            },
+                            checked: `${getConfig("enable_notification_sound") === true ? "checked" : ""}`
+                        }),
                         t.enable_notification_sound()
                     ])
                 ]),

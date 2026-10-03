@@ -27,6 +27,14 @@ export let setConfig = (key: string, value: string | number | boolean | undefine
     }
 }
 
+export let toggleConfig = (key: string) => {
+    if (!key) return;
+    let currentValue = getConfig(key);
+    if (typeof currentValue != "boolean") return;
+    currentValue = !currentValue;
+    setConfig(key, currentValue);
+}
+
 export let getConfig = (key: string) => {
     if (!key) return;
     const config = localStorage.getItem(key);
@@ -39,7 +47,11 @@ export let getConfig = (key: string) => {
             case "number":
                 return Number(config);
             case "boolean":
-                return Boolean(config);
+                if (config == "true") {
+                    return true;
+                } else {
+                    return false;
+                }
             default:
                 return config;
         }
