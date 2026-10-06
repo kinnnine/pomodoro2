@@ -9,7 +9,7 @@ const defaultConfig = {
     enable_notification_sound: false
 }
 
-export let setConfig = (key: string, value: string | number | boolean | undefined) => {
+export let setConfig = (key: string, value?: string | number | boolean) => {
     if (!key) return;
     if (!value) {
         const defaultValue = defaultConfig[key as keyof typeof defaultConfig];
@@ -58,7 +58,7 @@ export let getConfig = (key: string) => {
     }
 }
 
-export let clearConfig = (key: string | undefined) => {
+export let clearConfig = (key?: string) => {
     if (!key) {
         localStorage.clear();
     } else {
